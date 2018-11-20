@@ -6,8 +6,23 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+	<!--  define the dependency -->
+	<bean id="myTeacher" class="trusohamn.dependency.BadOne">
+	</bean>
+	<!--  define the bean -->
     <bean id="myCourse" class="trusohamn.firstSpring.Biology">
+	    <!--  setup constructor injection -->
+	    <constructor-arg ref="myTeacher"></constructor-arg>
+    </bean>
+    
+    <bean id="myTeacher2" class="trusohamn.dependency.GoodOne">
+	</bean>
+    <!--  define the bean -->
+    <bean id="myCourse2" class="trusohamn.firstSpring.Chemistry">
+	    <!--  setup setter injection -->
+	    <property name="teacher" ref="myTeacher2"></property>
+	    <!--  setup literal injection -->
+	    <property name="email" value="themail@gmail.com"></property>
     </bean>
     
 </beans>
