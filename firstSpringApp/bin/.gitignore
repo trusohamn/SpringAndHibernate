@@ -4,3 +4,4 @@
 /applicationContext.out.xml
 /beanScope_applicationContext.xml
 /Apps/
+/beanLifeCycle_applicationContext.xml

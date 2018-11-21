@@ -39,5 +39,13 @@ public class Biology implements Course {
 	public String getEmail() {
 		return email;
 	}
+	//an init method
+	public void myInit() {
+		System.out.println("inside myInit method");		
+	}
+	//a destroy method
+	public void myDestroy() {
+		System.out.println("inside myDestroy method");	
+	}
 
 }
