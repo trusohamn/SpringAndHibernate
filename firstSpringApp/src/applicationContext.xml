@@ -6,6 +6,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- load the properties file --> 
+	<context:property-placeholder location="classpath:courses.properties"></context:property-placeholder>
 	<!--  define the dependency -->
 	<bean id="myTeacher" class="trusohamn.dependency.BadOne">
 	</bean>
@@ -23,6 +25,16 @@
 	    <property name="teacher" ref="myTeacher2"></property>
 	    <!--  setup literal injection -->
 	    <property name="email" value="themail@gmail.com"></property>
+    </bean>
+    
+    <bean id="myTeacher3" class="trusohamn.dependency.GoodOne">
+	</bean>
+    <!--  define the bean -->
+    <bean id="myCourse3" class="trusohamn.firstSpring.Chemistry">
+	    <!--  setup setter injection -->
+	    <property name="teacher" ref="myTeacher3"></property>
+	    <!--  setup literal injection -->
+	    <property name="email" value="${foo.email}"></property>
     </bean>
     
 </beans>

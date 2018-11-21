@@ -1,6 +1,8 @@
-package trusohamn.firstSpring;
+package Apps;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import trusohamn.firstSpring.Course;
 
 public class MyApp {
 
@@ -12,16 +14,23 @@ public class MyApp {
 		// call methods on the bean
 		System.out.println(myCourse.getDescription());
 		System.out.println(myCourse.sayHello());
-		// close the context
 		
-		//check setter injection
+		
+		// setter injection
 		Course myCourse2 = context.getBean("myCourse2", Course.class);
 		// call methods on the bean
 		System.out.println(myCourse2.getDescription());
 		System.out.println(myCourse2.sayHello());
 		System.out.println(myCourse2.getEmail());
 		
+		//injection from properties file
+		Course myCourse3 = context.getBean("myCourse3", Course.class);
+		// call methods on the bean
+		System.out.println(myCourse3.getDescription());
+		System.out.println(myCourse3.sayHello());
+		System.out.println(myCourse3.getEmail());
 		
+		// close the context
 		context.close();
 	
 	}

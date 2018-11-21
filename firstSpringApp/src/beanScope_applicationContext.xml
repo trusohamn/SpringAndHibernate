@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--  define the dependency -->
+	<bean id="myTeacher" class="trusohamn.dependency.BadOne">
+	</bean>
+    <bean id="myCourse" class="trusohamn.firstSpring.Biology">
+	    <!--  setup constructor injection -->
+	    <constructor-arg ref="myTeacher"></constructor-arg>
+    </bean>
+    
+    <!--  define the dependency -->
+	<bean id="myTeacher2" class="trusohamn.dependency.BadOne">
+	</bean>
+    <bean id="myCourse2" 
+    	class="trusohamn.firstSpring.Biology"
+    	scope="prototype">
+	    <!--  setup constructor injection -->
+	    <constructor-arg ref="myTeacher2"></constructor-arg>
+    </bean>
+   
+    
+</beans>
