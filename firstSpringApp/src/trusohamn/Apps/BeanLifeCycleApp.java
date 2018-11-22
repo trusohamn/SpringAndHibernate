@@ -1,4 +1,4 @@
-package Apps;
+package trusohamn.Apps;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
