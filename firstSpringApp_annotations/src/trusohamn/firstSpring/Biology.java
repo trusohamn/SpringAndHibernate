@@ -1,13 +1,13 @@
 package trusohamn.firstSpring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import trusohamn.dependency.Teacher;
 
 @Component("myCourse")
 public class Biology implements Course {
-	//dependency private field
 	private Teacher teacher;
 	private String email;
 	
@@ -24,15 +24,11 @@ public class Biology implements Course {
 		return teacher.sayHello();
 	}
 	@Autowired
+	@Qualifier("goodOne")
 	public void setTeacher(Teacher t) {
 		this.teacher = t;
 	}
 	
-	/*@Autowired
-	public void checkAutowired() {
-		System.out.println("checking method autowired");
-	}
-	*/
 	public void setEmail(String email) {
 		this.email = email;
 	}

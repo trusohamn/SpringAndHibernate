@@ -1,24 +1,25 @@
 package trusohamn.firstSpring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import trusohamn.dependency.Teacher;
 
-//default bean id
 @Component
 public class Chemistry implements Course {
-	//dependency private field
+	
 	private Teacher teacher;
 	private String email;
 
 	public Chemistry() {
 	}
 	
-	@Autowired
-	public Chemistry(Teacher teacher) {
+	@Autowired 
+	public Chemistry(@Qualifier("goodOne")Teacher teacher) {
 		this.teacher = teacher;
 	}
+	
 	@Override
 	public String getDescription() {
 		return "You will learn about organic chemicals";

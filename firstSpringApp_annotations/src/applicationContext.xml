@@ -9,6 +9,7 @@
 
 	<!-- enable component scanning -->
 	<context:component-scan base-package="trusohamn"></context:component-scan>
-
+ 	<!-- injection of values from the file-->
+ 	<context:property-placeholder location="classpath:courses.properties"/> 
 
 </beans>

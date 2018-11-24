@@ -7,4 +7,6 @@ public interface Course {
 	
 	public String sayHello();
 	
+	public String getEmail();
+	
 }

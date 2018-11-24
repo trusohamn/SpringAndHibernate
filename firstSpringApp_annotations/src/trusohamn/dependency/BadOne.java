@@ -1,5 +1,7 @@
 package trusohamn.dependency;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BadOne implements Teacher {
 
 	@Override
