@@ -1,5 +1,8 @@
 package trusohamn.firstSpring;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -37,10 +40,12 @@ public class Biology implements Course {
 		return email;
 	}
 	//an init method
+	@PostConstruct
 	public void myInit() {
 		System.out.println("inside myInit method");		
 	}
 	//a destroy method
+	@PreDestroy
 	public void myDestroy() {
 		System.out.println("inside myDestroy method");	
 	}
