@@ -7,21 +7,25 @@ import trusohamn.dependency.Teacher;
 
 //default bean id
 @Component
-public class Chemistry implements Course {
+public class Math implements Course {
 	//dependency private field
+	
+	//autowiring the field by using reflection
+	//no setters needed
+	@Autowired
 	private Teacher teacher;
 	private String email;
 
-	public Chemistry() {
+	public Math() {
 	}
-	
+	/*
 	@Autowired
 	public Chemistry(Teacher teacher) {
 		this.teacher = teacher;
-	}
+	} */
 	@Override
 	public String getDescription() {
-		return "You will learn about organic chemicals";
+		return "Numbers!";
 	}
 	@Override
 	public String sayHello() {

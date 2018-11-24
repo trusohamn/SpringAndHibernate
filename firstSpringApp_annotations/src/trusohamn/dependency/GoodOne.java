@@ -1,5 +1,8 @@
 package trusohamn.dependency;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GoodOne implements Teacher {
 
 	@Override

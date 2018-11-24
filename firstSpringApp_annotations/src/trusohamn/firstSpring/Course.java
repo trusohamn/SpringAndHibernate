@@ -5,4 +5,6 @@ public interface Course {
 
 	public String getDescription();
 	
+	public String sayHello();
+	
 }

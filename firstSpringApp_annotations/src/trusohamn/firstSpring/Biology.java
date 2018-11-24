@@ -1,5 +1,6 @@
 package trusohamn.firstSpring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import trusohamn.dependency.Teacher;
@@ -12,25 +13,26 @@ public class Biology implements Course {
 	
 	public Biology() {
 	}
-	
-	public Biology(Teacher teacher) {
-		this.teacher = teacher;
-	}
-	
+
 	@Override
 	public String getDescription() {
 		return "You will learn about plants and animals";
 	}
-
+	@Override
 	public String sayHello() {
 		// use the Teacher to sayHello
 		return teacher.sayHello();
 	}
-
+	@Autowired
 	public void setTeacher(Teacher t) {
 		this.teacher = t;
 	}
 	
+	/*@Autowired
+	public void checkAutowired() {
+		System.out.println("checking method autowired");
+	}
+	*/
 	public void setEmail(String email) {
 		this.email = email;
 	}
