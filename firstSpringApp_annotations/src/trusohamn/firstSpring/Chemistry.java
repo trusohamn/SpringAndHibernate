@@ -2,11 +2,13 @@ package trusohamn.firstSpring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import trusohamn.dependency.Teacher;
 
 @Component
+@Scope("prototype")
 public class Chemistry implements Course {
 	
 	private Teacher teacher;
