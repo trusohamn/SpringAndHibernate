@@ -1,10 +1,12 @@
 package trusohamn.firstSpring;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import trusohamn.dependency.Teacher;
 
 public class CourseNotAnnotated implements Course {
 	private Teacher teacher;
-	
+	@Value("${foo.email}")
 	private String email;
 
 	public CourseNotAnnotated(Teacher teacher) {

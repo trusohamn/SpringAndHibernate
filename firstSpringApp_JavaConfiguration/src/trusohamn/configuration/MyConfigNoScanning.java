@@ -1,8 +1,8 @@
 package trusohamn.configuration;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import trusohamn.dependency.Teacher;
 import trusohamn.dependency.TeacherNoAnnotation;
@@ -10,7 +10,8 @@ import trusohamn.firstSpring.Course;
 import trusohamn.firstSpring.CourseNotAnnotated;
 
 @Configuration
-@ComponentScan("trusohamn")
+//@ComponentScan("trusohamn")
+@PropertySource("classpath:courses.properties")
 public class MyConfigNoScanning {
 	//dependency bean
 	@Bean 

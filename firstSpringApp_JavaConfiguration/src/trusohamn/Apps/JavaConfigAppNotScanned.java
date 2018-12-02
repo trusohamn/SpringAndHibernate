@@ -1,20 +1,21 @@
 package trusohamn.Apps;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import trusohamn.configuration.MyConfig;
 import trusohamn.firstSpring.Course;
 
-public class AnnotationApp {
+public class JavaConfigAppNotScanned {
 
 	public static void main(String[] args) {
-		// load the Spring configuration file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext ("applicationContext.xml");
-		
+		// read Spring configuration java class
+		AnnotationConfigApplicationContext context =
+			new AnnotationConfigApplicationContext(MyConfig.class);
 		// retrieve bean from the Spring container
-		Course myCourse = context.getBean("myCourse", Course.class);
+		Course myCourse = context.getBean("myCourseBeanId", Course.class);
 		// call methods on the bean
 		System.out.println(myCourse.getDescription());
-		
 		
 		//autowired constructor
 		// retrieve bean from the Spring container with default beanid
@@ -41,7 +42,6 @@ public class AnnotationApp {
 		System.out.println(myCourse4.sayHello());
 		//value injected from the file
 		System.out.println(myCourse4.getEmail());
-		
 		
 		// close the context
 		context.close();
