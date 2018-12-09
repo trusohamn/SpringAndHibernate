@@ -11,13 +11,15 @@
     	http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<!-- Step 3: Add support for component scanning -->
+	<!-- Add support for component scanning -->
 	<context:component-scan base-package="com.trusohamn" />
+	<!--Map resource folder -->
+	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources> 
 
-	<!-- Step 4: Add support for conversion, formatting and validation support -->
+	<!-- Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
 
-	<!-- Step 5: Define Spring MVC view resolver -->
+	<!-- Define Spring MVC view resolver -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/my_view/" />
