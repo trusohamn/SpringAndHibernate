@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/parent1")
-public class HelloWorldController {
+@RequestMapping("/parent2")
+public class HelloWorldControllerDuplicated {
 	//a controller method showing the html form
 	@RequestMapping("/showForm")
 	public String showForm() {

@@ -2,7 +2,7 @@
 <html>
 <body>
 
-	<form action="processForm" method=#GET>
+	<form action="processFormThird" method="GET">
 		<input type="text" name="yourName" placeholder="What's your name?" />
 		<input type="submit"/>
 	</form>

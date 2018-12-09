@@ -3,7 +3,9 @@
 <body>
 <h1> Home Page</h1>
 
-<a href="showForm">Hello World form</a>
+<a href="parent1/showForm">Hello World form from parent1</a>
+<br>
+<a href="parent2/showForm">Hello World form from parent2</a>
 <h2> image example</h2>
 <img src="${pageContext.request.contextPath}/resources/img/vascSimPt3.PNG"> 
 </body>
