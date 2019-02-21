@@ -5,6 +5,7 @@ public class Person {
 	private String lastName;
 	private String country;
 	private String subject;
+	private String[] groups;
 	
 	public Person() {
 		
@@ -40,6 +41,14 @@ public class Person {
 
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public String[] getGroups() {
+		return groups;
+	}
+
+	public void setGroups(String[] groups) {
+		this.groups = groups;
 	}
 
 }

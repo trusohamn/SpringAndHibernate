@@ -32,6 +32,13 @@
     	Networks <form:radiobutton path="subject" value="Networks"/>
     	Java <form:radiobutton path="subject" value="Java"/>
 
+
+    	<br><br>
+    	Groups:
+    	<br>
+    	A <form:checkbox path="groups" value="A"/>
+    	B <form:checkbox path="groups" value="B"/>
+    	C<form:checkbox path="groups" value="C"/>
     	
     	<br><br>
     	
