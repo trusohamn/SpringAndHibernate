@@ -10,7 +10,11 @@
 </head>
 <body>
 
-Registered: ${person.firstName} ${person.lastName} ${person.country}
+Registered: ${person.firstName} ${person.lastName} 
+<br>
+from: ${person.country}
+<br>
+subject: ${person.subject}
 
 </body>
 </html>

@@ -4,6 +4,7 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private String country;
+	private String subject;
 	
 	public Person() {
 		
@@ -31,6 +32,14 @@ public class Person {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 
 }

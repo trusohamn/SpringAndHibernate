@@ -14,19 +14,28 @@
 		 
 		Last name: <form:input path="lastName"/>
 		 <br><br>
-		 <input type="submit" value="Submit"/>
 		 
-		 Country:
-		
+		 Country:	
 <%-- 		<form:select path="country">
 		 <form:option value="PLN" label="Poland"/>
 		 <form:option value="SE" label="Sweden"/>
 		 </form:select> --%>
-
 		 
 		<form:select path="country"> 
      	<form:options items="${theCountryOptions}" />
     	</form:select>
+    	
+    	<br><br>
+    	Subject:
+    	<br>
+    	Calculus <form:radiobutton path="subject" value="Calculus"/>
+    	Networks <form:radiobutton path="subject" value="Networks"/>
+    	Java <form:radiobutton path="subject" value="Java"/>
+
+    	
+    	<br><br>
+    	
+    	<input type="submit" value="Submit"/>
 		 
 	</form:form>
 
