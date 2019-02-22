@@ -4,6 +4,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration</title>
+
+	<style>
+		.error {color:red}
+	</style>
+
 </head>
 <body>
 
@@ -12,7 +17,9 @@
 		First name: <form:input path="firstName"/>
 		 <br><br>
 		 
-		Last name: <form:input path="lastName"/>
+		Last name (*): <form:input path="lastName"/>
+		<!-- validation rules -->
+		<form:errors path="lastName" cssClass="error"/>
 		 <br><br>
 		 
 		 Country:	

@@ -1,7 +1,12 @@
 package com.trusohamn.my_spring_mvc.person_data;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Person {
 	private String firstName;
+	@NotNull(message="last name is requireed")
+	@Size(min=1, message="last name is required")
 	private String lastName;
 	private String country;
 	private String subject;
