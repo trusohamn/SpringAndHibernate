@@ -14,10 +14,11 @@ public class Person {
 	private String country;
 	private String subject;
 	private String[] groups;
+	@NotNull(message="age is requireed")
 	@Min(value=0, message="must be greater or equal to 0")
 	@Max(value=100, message="must be smaller or equal to 100 ")
-	private int age;
-	@Pattern(regexp="[0-9] {5}", message="only 5 digits")
+	private Integer age;
+	@Pattern(regexp="[0-9]{5}", message="only 5 digits")
 	private String postalCode;
 	
 	
@@ -65,11 +66,11 @@ public class Person {
 		this.groups = groups;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
