@@ -23,6 +23,9 @@ Groups:
 	</c:forEach>
 
 </ul>
+<br>
+<br>
+Age: ${person.age}
 
 </body>
 </html>
