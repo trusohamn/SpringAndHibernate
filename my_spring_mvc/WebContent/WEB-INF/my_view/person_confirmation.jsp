@@ -26,6 +26,8 @@ Groups:
 <br>
 <br>
 Age: ${person.age}
-
+<br>
+<br>
+Postal code: ${person.postalCode}
 </body>
 </html>

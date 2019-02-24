@@ -55,9 +55,18 @@
 
 		<br>
 		<br>
+		
 		Age: <form:input path="age" />
 		<!-- validation rules -->
 		<form:errors path="age" cssClass="error" />
+		
+		<br>
+		<br>
+
+		Postal code: <form:input path="postalCode" />
+		<!-- validation rules -->
+		<form:errors path="postalCode" cssClass="error" />
+		
 		<br>
 		<br>
 

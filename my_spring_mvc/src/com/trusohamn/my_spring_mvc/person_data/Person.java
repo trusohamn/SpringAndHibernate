@@ -3,6 +3,7 @@ package com.trusohamn.my_spring_mvc.person_data;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Person {
@@ -16,6 +17,8 @@ public class Person {
 	@Min(value=0, message="must be greater or equal to 0")
 	@Max(value=100, message="must be smaller or equal to 100 ")
 	private int age;
+	@Pattern(regexp="[0-9] {5}", message="only 5 digits")
+	private String postalCode;
 	
 	
 	public Person() {
@@ -68,6 +71,14 @@ public class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 
 }
