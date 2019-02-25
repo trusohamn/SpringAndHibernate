@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.trusohamn.my_spring_mvc.validation.CustomValidation;
+
 public class Person {
 	private String firstName;
 	@NotNull(message="last name is requireed")
@@ -20,7 +22,8 @@ public class Person {
 	private Integer age;
 	@Pattern(regexp="[0-9]{5}", message="only 5 digits")
 	private String postalCode;
-	
+	@CustomValidation(value="MAR", message="custom validation error")
+	private String myCode;
 	
 	public Person() {
 		
@@ -80,6 +83,14 @@ public class Person {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getMyCode() {
+		return myCode;
+	}
+
+	public void setMyCode(String myCode) {
+		this.myCode = myCode;
 	}
 
 }

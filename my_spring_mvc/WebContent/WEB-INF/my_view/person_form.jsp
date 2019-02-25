@@ -69,7 +69,13 @@
 		
 		<br>
 		<br>
-
+		
+		Personal code: <form:input path="myCode" />
+		<!-- validation rules -->
+		<form:errors path="myCode" cssClass="error" />
+		
+		<br>
+		<br>
 		<input type="submit" value="Submit" />
 
 	</form:form>

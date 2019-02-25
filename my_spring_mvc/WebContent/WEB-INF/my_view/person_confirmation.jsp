@@ -9,19 +9,17 @@
 <body>
 
 Registered: ${person.firstName} ${person.lastName} 
-<br>
-from: ${person.country}
-<br>
-subject: ${person.subject}
+<br><br>
+From: ${person.country}
+<br><br>
+Subject: ${person.subject}
 <br>
 <br>
 Groups: 
-<br>
 <ul>
 	<c:forEach var="temp" items= "${person.groups}">
 		<li> ${temp} </li>
 	</c:forEach>
-
 </ul>
 <br>
 <br>
@@ -29,5 +27,8 @@ Age: ${person.age}
 <br>
 <br>
 Postal code: ${person.postalCode}
+<br>
+<br>
+Personal code: ${person.myCode}
 </body>
 </html>
