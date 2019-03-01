@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.truso.hibernate.entity.Person;
 
-public class App {
+public class AppBasicRead {
 	
 	public static void main(String[] args) {
 		//session factory
@@ -19,6 +19,8 @@ public class App {
 		Session session = factory.getCurrentSession();
 		
 		try {
+			//WRITE
+			
 			System.out.println("Creating a new person object");
 			Person temp = new Person("Marta", "Truso", "m.t@gmail.com");
 			
