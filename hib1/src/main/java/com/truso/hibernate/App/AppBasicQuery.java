@@ -29,7 +29,7 @@ public class AppBasicQuery {
 			List<Person> myList = session.createQuery("from Person").getResultList();	
 			myList.forEach(e -> System.out.println(e));
 		
-			System.out.println("\n person named Marta: ");
+			System.out.println("\nperson named Marta: ");
 			myList = session.createQuery("from Person p where p.firstName = 'Marta'").getResultList();	
 			myList.forEach(e -> System.out.println(e));
 			
